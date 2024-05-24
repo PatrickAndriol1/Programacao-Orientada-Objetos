@@ -6,7 +6,7 @@ public class App {
 
         Mecanico mecanico = new Mecanico();
         mecanico.preencherDados("Seu Zé", true, 85);
-        mecanico. mostrarDados();
+        mecanico.mostrarDados();
 
         Luta luta = new Luta();
         luta.especificarLuta("Karate", 2, 'F');
