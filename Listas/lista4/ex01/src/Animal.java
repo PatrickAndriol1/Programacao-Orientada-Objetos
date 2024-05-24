@@ -12,11 +12,16 @@ public class Animal {
     public static void mostrarAtributos(){
         System.out.println(String.format(
             """
-               Especie: %s
-               Comprimento/Altura: %s m
-               Peso: %s Kg 
+            Especie: %s
+            Comprimento/Altura: %s m
+            Peso: %s Kg 
             """,
             especie, tamanho, peso
         ));
+    }
+    public void preencherAtributos(double tamanho, String especie, double peso){
+        this.especie = especie;
+        this.peso = peso;
+        this.tamanho = tamanho;
     }
 }
