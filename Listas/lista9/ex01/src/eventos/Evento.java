@@ -12,35 +12,28 @@ public abstract class Evento {
     }
 
     public void exibirInformacoes(){
-        System.out.println("Nome: " + nome);
-        System.out.println("Local: " + local);
-        System.out.println("Data: " + data);
+        System.out.printf("Nome: %s%nLocal: %s%nData: %s%n", nome, local, data);
     }
 
     public abstract void comecarEvento();
     
     public String getNome() {
         return this.nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
+    }    
     public String getLocal() {
         return this.local;
     }
-
-    public void setLocal(String local) {
-        this.local = local;
-    }
-
     public String getData() {
         return this.data;
     }
-
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setLocal(String local) {
+        this.local = local;
+    }
     public void setData(String data) {
         this.data = data;
     }
-
 }

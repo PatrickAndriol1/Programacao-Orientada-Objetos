@@ -19,15 +19,13 @@ public class Show extends Evento {
 
     @Override
     public void comecarEvento(){
-        System.out.println("Show " + getNome() + " iniciado!");
+        System.out.println("Senhoras e senhores, o show " + getNome() + " vai comecar!!!");
     }
 
     public void comecarEvento(boolean comAplausos){
         comecarEvento();
         if(comAplausos){
-            System.out.println("O show começa com aplausos do público!");
-        }else{
-            System.out.println("O show começa sem aplausos do público.!");
+            System.out.println("Clap clap clap! (Palmas)");
         }
     }
 

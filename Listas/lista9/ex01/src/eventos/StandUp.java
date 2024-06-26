@@ -17,7 +17,12 @@ public class StandUp extends Evento {
 
     @Override
     public void comecarEvento(){
-        System.out.println("A apresentação de stand-up com " + getNome() + " está começando!");
+        System.out.printf("O espetaculo %s de %s estah comecando!!!%n", getNome(), getComediante());
+    }
+
+    public void comecarEvento(String piada){
+        comecarEvento();
+        System.out.println(piada);
     }
 
     public String getComediante() {
