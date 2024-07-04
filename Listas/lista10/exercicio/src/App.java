@@ -1,29 +1,37 @@
 import java.util.Arrays;
-
-import locadora.AudioVisual;
-import locadora.Filme;
-import locadora.Jogo;
-import locadora.Locadora;
+import locadora.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Filme filme = new Filme("homem aranha sem volta para casa", "Jon Watts", Arrays.asList("Tom Holland", "Tobey Maguire", "Andrew Garfield"));
-        Jogo jogo = new Jogo("GTA 5", "PlayStation 5");
-
+        Filme filme = new Filme("Velozes e Furiosos", "Rob Cohen", Arrays.asList("Vin Diesel", "Paul Walker", "Jordana Brewster"));
+        Jogo jogo = new Jogo("Free Fire", "PlayStore");
+        
         Locadora<AudioVisual> locadora = new Locadora<>();
-
+        
         locadora.adicionarItem(filme);
         locadora.adicionarItem(jogo);
-        System.out.println("Itens disponíveis na locadora:");
+        
         locadora.listarItens();
+        
+        String titulo1 = "Minecraft";
+        String titulo2 = "Velozes e Furiosos";
+        
+        AudioVisual item = locadora.buscarItem(titulo1);
+        System.out.println("Buscando " + titulo1 + "...");
+        procurarItem(item);
 
-        String tituloBusca = "Porco Aranha";
-        System.out.println("Buscando item com título: " + tituloBusca);
-        AudioVisual itemBuscado = locadora.buscarItem(tituloBusca);
-        if (itemBuscado != null) {
-            itemBuscado.exibirInfo();
+        System.out.println();
+        
+        AudioVisual item2 = locadora.buscarItem(titulo2);       
+        System.out.println("Buscando " + titulo2 + "...");
+        procurarItem(item2);
+    }
+
+    static void procurarItem(AudioVisual item){
+        if (item != null) {
+            item.exibirInfo();
         } else {
-            System.out.println("Item não encontrado.");
+            System.out.println("Nao disponivel no momento...");
         }
     }
 }

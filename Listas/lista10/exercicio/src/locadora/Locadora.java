@@ -15,6 +15,7 @@ public class Locadora<T extends AudioVisual> {
     }
 
     public void listarItens() {
+        System.out.println("Disponível na locadora:\n");
         for (T item : acervo) {
             item.exibirInfo();
         }

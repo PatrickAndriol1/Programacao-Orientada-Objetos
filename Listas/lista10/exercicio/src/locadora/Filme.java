@@ -15,10 +15,7 @@ public class Filme implements AudioVisual {
 
     @Override
     public void exibirInfo() {
-        System.out.println("Filme:");
-        System.out.println("Título: " + titulo);
-        System.out.println("Diretor: " + diretor);
-        System.out.println("Atores: " + atores);
+        System.out.printf("Filme: %s%nDiretor: %s%nAtores: %s%n", titulo, diretor, atores);
         System.out.println();
     }
 
@@ -26,23 +23,19 @@ public class Filme implements AudioVisual {
     public String getTitulo() {
         return titulo;
     }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getDiretor() {
         return diretor;
     }
-
-    public void setDiretor(String diretor) {
-        this.diretor = diretor;
-    }
-
     public List<String> getAtores() {
         return atores;
     }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
+    }
     public void setAtores(List<String> atores) {
         this.atores = atores;
     }

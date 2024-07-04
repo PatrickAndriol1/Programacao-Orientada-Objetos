@@ -11,24 +11,20 @@ public class Jogo implements AudioVisual {
 
     @Override
     public void exibirInfo() {
-        System.out.println("Jogo:");
-        System.out.println("Título: " + titulo);
-        System.out.println("Plataforma: " + plataforma);
+        System.out.printf("Jogo: %s%nPlataforma Disponivel: %s%n", titulo, plataforma);
         System.out.println();
     }
 
     public String getTitulo() {
         return titulo;
     }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getPlataforma() {
         return plataforma;
     }
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
     public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
     }
